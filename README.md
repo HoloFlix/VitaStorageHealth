@@ -1,4 +1,4 @@
-# Vita Storage Health 🎮💾
+# Vita Storage Health
 
 [![Platform](https://img.shields.io/badge/Platform-PS%20Vita%20%7C%20PS%20TV-blue.svg)](https://vitasdk.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -10,7 +10,7 @@ Developed in native C using Vita2D, it provides deep hardware inspection, real-t
 
 ---
 
-## 🌟 Key Features
+##  Key Features
 
 ### 1. Multi-Partition Mount Inspector (`OVERVIEW`)
 - **Real-Time Storage Hardware Query:**
@@ -20,7 +20,7 @@ Developed in native C using Vita2D, it provides deep hardware inspection, real-t
   - `uma0:` (Secondary USB storage / official Memory Card slot)
   - `xmc0:`, `gro0:`, `grw0:` (Game Card read/write partitions)
 - **Active Boot Device Safeguards:**
-  - Clearly badges `🔒 BOOT DEVICE (SYSTEM PROTECTED)` and `🔒 INTERNAL OS (UR0)` to prevent user mistakes.
+  - Clearly badges ` BOOT DEVICE (SYSTEM PROTECTED)` and ` INTERNAL OS (UR0)` to prevent user mistakes.
   - Displays partition hardware type, formatted capacity, used/free space gauges, and calculated health score.
 
 ### 2. Isolated Speed Benchmarking (`BENCHMARK`)
@@ -48,7 +48,7 @@ Developed in native C using Vita2D, it provides deep hardware inspection, real-t
 
 ---
 
-## 🎮 Controls
+##  Controls
 
 | Button | Screen | Action |
 | :--- | :--- | :--- |
@@ -62,7 +62,7 @@ Developed in native C using Vita2D, it provides deep hardware inspection, real-t
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```
 VitaStorageHealth/
@@ -97,7 +97,7 @@ VitaStorageHealth/
 
 ---
 
-## 🛠️ Building from Source
+##  Building from Source
 
 ### Prerequisites
 Install the official [VitaSDK](https://vitasdk.org/) toolchain and ensure it is available in your PATH:
@@ -117,5 +117,5 @@ Output: `VitaStorageHealth.vpk`
 
 ---
 
-## 📄 License
+##  License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
