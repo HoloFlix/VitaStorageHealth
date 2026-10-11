@@ -1,3 +1,8 @@
+VITASDK  ?= /usr/local/vitasdk
+export PATH := $(VITASDK)/bin:$(PATH)
+export TEMP := C:\msys64\tmp
+export TMP  := C:\msys64\tmp
+
 TITLE_ID := VSHL00001
 TITLE    := Vita Storage Health
 TARGET   := VitaStorageHealth
@@ -8,10 +13,14 @@ LIBS = -lvita2d -lpng -lz -lScePgf_stub -lSceDisplay_stub -lSceGxm_stub \
 	-lSceAppMgr_stub -lScePower_stub -lSceRtc_stub \
 	-lSceCommonDialog_stub -lSceAppUtil_stub -lm -lc
 
-PREFIX  = arm-vita-eabi
-CC      = $(PREFIX)-gcc
-CFLAGS  = -Wl,-q -Wall -O3 -std=c99
-ASFLAGS = $(CFLAGS)
+PREFIX     = arm-vita-eabi
+CC         = $(VITASDK)/bin/$(PREFIX)-gcc
+# Windows-native path for the GCC .exe to resolve includes correctly
+VITASDK_W  = C:/msys64/usr/local/vitasdk
+CFLAGS     = -Wl,-q -Wall -O3 -std=c99 \
+	-I$(VITASDK_W)/arm-vita-eabi/include
+LDFLAGS    = -L$(VITASDK_W)/arm-vita-eabi/lib
+ASFLAGS    = $(CFLAGS)
 
 all: $(TARGET).vpk
 
@@ -26,7 +35,7 @@ param.sfo:
 	vita-elf-create $< $@
 
 $(TARGET).elf: $(OBJS)
-	$(CC) $(CFLAGS) $^ $(LIBS) -o $@
+	$(CC) $(CFLAGS) $(LDFLAGS) $^ $(LIBS) -o $@
 
 clean:
 	@rm -rf $(TARGET).vpk $(TARGET).velf $(TARGET).elf $(OBJS) eboot.bin param.sfo
