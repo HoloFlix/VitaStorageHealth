@@ -1,0 +1,22 @@
+# Build artifacts
+*.elf
+*.velf
+*.vpk
+*.o
+*.a
+eboot.bin
+param.sfo
+
+# Temporary & cache files
+*.tmp
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE & Editor artifacts
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db

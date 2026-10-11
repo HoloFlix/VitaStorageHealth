@@ -1,0 +1,18 @@
+{
+  "id": 1939,
+  "name": "Vita Storage Health",
+  "author": "HoloFlix",
+  "category": "utility",
+  "platform": "vita",
+  "titleid": "VSHL00001",
+  "repo": "HoloFlix/VitaStorageHealth",
+  "asset": "*.vpk",
+  "prerelease": false,
+  "icon": "1939-vita-storage-health.png",
+  "description": "All-in-one storage health, benchmarking, maintenance, and TaiHEN plugin manager for PS Vita. Features real-time sequential and random 4K IOPS benchmarks, H2testw-style fake capacity detection, cache cleaning, boot freeze conflict diagnosis, and driver safety locks.",
+  "requirements": "",
+  "screenshots": [],
+  "trophies": false,
+  "ai": false,
+  "trusted": false
+}
